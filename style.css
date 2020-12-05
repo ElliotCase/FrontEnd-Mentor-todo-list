@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+body{
+    background-color: #181824;
+}
+
+.bg{
+    background-image: url(/images/bg-desktop-dark.jpg);
+        background-size: 100% 200%;
+        background-repeat:no-repeat;
+        height: 230px;
+        z-index: 0;
+}
+
+.container{
+    max-width: 1150px;
+    margin: -180px auto;
+    z-index: 1;
+    height: 100vh;
+    width: 70%;
+
+
+}
+
+
+h1{
+    color: #fff;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 38px;
+    letter-spacing: 10px;
+
+}
+
+
+.title-box{
+    display: flex;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.new-todo{
+    background-color: #25273c;
+    padding: 18px;
+    display: flex;
+    margin-top: 50px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    
+}
+
+
+input#todo-input {
+    background-color: transparent;
+    border-style: none;
+    box-sizing: border-box;
+    caret-color: #3a7bfd;
+    color: #cacde8;
+    cursor: text;
+    font-family: Arial;
+    font-size: 20px;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    margin-left: 20px;
+  }
+  
+  input#todo-input:focus {
+    outline: none;
+  }
+
+
+  .todo-button{
+    background-color: transparent;
+    border:1px solid gray;    
+    height:20px;
+    border-radius:50%;
+    width:20px;
+    background-image: none;
+    transition: 1s;
+
+    
+    
+  }
+
+.todo-block{
+    width: 100%;
+
+}
+  .todo-button:hover{
+    background-image: linear-gradient(#57ddff ,#c058f3);
+
+  }
+
+  .current-todo{
+    background-color: #25273c;
+    padding: 18px;
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    border-bottom: 1px solid rgba(245, 245, 245, 0.126);
+  }
+
+  .todo-text{
+      color: #fff;
+      font-family: 'Josefin Sans', sans-serif;
+      display: flex;
+      align-items: center;
+      margin-left: 30px;
+      font-size: 20px;
+  }
+
+ 
+
+  .settings{
+    background-color: #25273c;
+    padding: 18px;
+    display: flex;
+    color: rgb(121, 121, 121);
+    font-family: 'Josefin Sans', sans-serif;
+    justify-content: space-between;
+
+  }
+
+  .filters span{
+    display: inline;
+    margin: 20px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.filters span:hover{
+    color: rgb(165, 165, 165);
+    }
+
