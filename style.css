@@ -91,7 +91,7 @@ input#todo-input {
     border-radius:50%;
     width:20px;
     background-image: none;
-    transition: 1s;
+    cursor: pointer;
 
     
     
@@ -101,12 +101,11 @@ input#todo-input {
     width: 100%;
 
 }
-  .todo-button:hover{
-    background-image: linear-gradient(#57ddff ,#c058f3);
+  .completed-btn{
 
   }
 
-  .current-todo{
+  .todo{
     background-color: #25273c;
     padding: 18px;
     display: flex;
@@ -133,6 +132,7 @@ input#todo-input {
     color: rgb(121, 121, 121);
     font-family: 'Josefin Sans', sans-serif;
     justify-content: space-between;
+    
 
   }
 
@@ -146,4 +146,56 @@ input#todo-input {
 .filters span:hover{
     color: rgb(165, 165, 165);
     }
+
+
+
+.x{
+  padding: 0;
+  border: none;
+  background: none;
+  color: #fff;
+  opacity: 0;
+  transition: 0.8s;
+  display: flex;
+  justify-content: flex-end;
+  cursor: pointer;
+    }
+
+
+    
+.todo:hover .x{
+  opacity: 1;
+}
+
+
+
+.line{
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+
+.completed{
+  text-decoration: line-through;
+  color: gray;
+  text-decoration-color: white;
+}
+
+
+/* .completedd{
+  background-image: linear-gradient(#57ddff ,#c058f3);
+} */
+
+.completedd{
+  background-image: url("./images/icon-check.svg"), linear-gradient(#57ddff ,#c058f3); /* W3C */
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: none;
+
+
+
+}
 

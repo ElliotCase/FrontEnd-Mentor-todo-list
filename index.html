@@ -44,56 +44,84 @@
 
     <div class="new-todo">
       <button class="todo-button" type="submit"></button>
-      <input id="todo-input" type="text" placeholder="Create a new tood...">
+      <input id="todo-input" type="text" placeholder="Create a new todo...">
     </div>
 
 
-    <div class="todo-block" id="todo-block">
-      <div class="current-todo">
-        <button class="todo-button" type="submit"></button>
-        <p class="todo-text">Complete online javascript course</p>
+    <div class="todo-container" id="todo-container">
 
 
-      </div>
-      <div class="current-todo">
-        <button class="todo-button" type="submit"></button>
-        <p class="todo-text">Jog around the park 3x</p>
+
+      <ul class="todo-list">
+        <div class="todo">
+          <button class="todo-button" type="submit"></button>
+          <div class="line">
+
+            <li class="todo-text">Complete online javascript course</li>
+            <button class="x"><i class="fas fa-times "></i></button>
+          </div>
+
+        </div>
 
 
-      </div>
-      <div class="current-todo">
-        <button class="todo-button" type="submit"></button>
-        <p class="todo-text">10 minute meditation</p>
+        <div class="todo">
+          <button class="todo-button" type="submit"></button>
+          <div class="line">
+
+            <li class="todo-text">Jog around the park 3x</li>
+            <button class="x"><i class="fas fa-times "></i></button>
+          </div>
+        </div>
 
 
-      </div>
-      <div class="current-todo">
-        <button class="todo-button" type="submit"></button>
-        <p class="todo-text">Read for 1 hour</p>
+        <div class="todo">
+          <button class="todo-button" type="submit"></button>
+          <div class="line">
+            <li class="todo-text">10 minute meditatio</li>
+            <button class="x"><i class="fas fa-times "></i></button>
+          </div>
+        </div>
 
 
-      </div>
-      <div class="current-todo">
-        <button class="todo-button" type="submit"></button>
-        <p class="todo-text">Pick up groceries</p>
+        <div class="todo">
+          <button class="todo-button" type="submit"></button>
+          <div class="line">
+            <li class="todo-text">Read for 1 hour</li>
+            <button class="x"><i class="fas fa-times "></i></button>
+          </div>
+        </div>
+
+        <div class="todo">
+          <button class="todo-button" type="submit"></button>
+          <div class="line">
+            <li class="todo-text">Pick up groceries</li>
+            <button class="x"><i class="fas fa-times "></i></button>
+          </div>
+        </div>
 
 
-      </div>
-      <div class="current-todo">
-        <button class="todo-button" type="submit"></button>
-        <p class="todo-text">Complete todo app on FrontendMentor</p>
+        <div class="todo">
+          <button class="todo-button" type="submit"></button>
+          <div class="line">
+            <li class="todo-text">Complete todo app on FrontendMentor</li>
+            <button class="x"><i class="fas fa-times "></i></button>
+          </div>
+        </div>
 
 
-      </div>
+
+      </ul>
+
+
     </div>
     <div class="settings">
       <div class="">
         <p>1 Items Left</p>
       </div>
       <div class="filters">
-        <span>All </span>
-        <span>Active </span>
-        <span>Completed </span>
+        <span class="all">All </span>
+        <span class="active">Active </span>
+        <span class="completed-setting">Completed </span>
       </div>
       <div>
         <p>Clear Completed</p>
