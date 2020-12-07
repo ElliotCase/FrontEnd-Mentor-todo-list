@@ -136,14 +136,14 @@ input#todo-input {
 
   }
 
-  .filters span{
+  .categories  span{
     display: inline;
     margin: 20px;
     font-weight: 700;
     transition: 0.3s;
 }
 
-.filters span:hover{
+.categories  span:hover{
     color: rgb(165, 165, 165);
     }
 
@@ -185,11 +185,9 @@ input#todo-input {
 }
 
 
-/* .completedd{
-  background-image: linear-gradient(#57ddff ,#c058f3);
-} */
 
-.completedd{
+
+.completed-tick{
   background-image: url("./images/icon-check.svg"), linear-gradient(#57ddff ,#c058f3); /* W3C */
   background-repeat: no-repeat;
   background-position: center;
@@ -199,3 +197,34 @@ input#todo-input {
 
 }
 
+
+.categories {
+  color: #484b6a;
+  font-size: 1.3rem;
+
+}
+
+.categories__content {
+  display: flex;
+}
+
+.category {
+padding:  0px 10px;
+}
+
+.category input {
+  opacity: 0;
+  cursor: pointer;
+  position: absolute;
+
+  width: 10%;
+  height: 10%;
+}
+
+
+.clear{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
