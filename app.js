@@ -6,17 +6,29 @@ const deleteToDo = document.querySelector('.x');
 const filter = document.querySelector(".categories");
 const left = document.querySelector(".leftItems")
 const clear = document.querySelector(".clear")
-
+const todo = document.querySelectorAll('.todo')
+const todoText = document.querySelectorAll('.todo-text')
+const newTodo = document.querySelector(".new-todo")
+const active = document.querySelector(".active-1")
+const completed = document.querySelector(".completed-1")
+const all = document.querySelector(".all-1")
 
 
 checkLeft()
+localStorage.setItem("theme", "theme-dark");
 
+localStorage.getItem("theme");
 // event listeners
 todoInput.addEventListener('keyup', function (e) {
     if (e.keyCode === 13) {
         addTodo();
     }
 });
+
+
+active.addEventListener('click', activeState);
+all.addEventListener('click', allState);
+completed.addEventListener('click', completedState);
 
 todoList.addEventListener('click', deleteCheck);
 
@@ -25,6 +37,9 @@ filter.addEventListener("click", filterItems)
 
 clear.addEventListener('click', clearCompleted)
 
+
+
+// lightMode.addEventListener('click', switchToLight)
 // functions
 
 function addTodo() {
@@ -62,6 +77,28 @@ function addTodo() {
     checkLeft();
 }
 
+
+function activeState() {
+    active.nextElementSibling.classList.toggle('label-color')
+    all.nextElementSibling.classList.remove('label-color')
+    completed.nextElementSibling.classList.remove('label-color')
+
+}
+
+function allState() {
+    active.nextElementSibling.classList.remove('label-color')
+    all.nextElementSibling.classList.toggle('label-color')
+    completed.nextElementSibling.classList.remove('label-color')
+
+}
+
+
+function completedState() {
+    active.nextElementSibling.classList.remove('label-color')
+    all.nextElementSibling.classList.remove('label-color')
+    completed.nextElementSibling.classList.toggle('label-color')
+
+}
 
 function deleteCheck(e) {
     const item = e.target;
@@ -111,6 +148,7 @@ function filterItems(event) {
                 if (item.children[0].classList.contains("completed-tick"))
                     item.style.display = "none";
                 else item.style.display = "flex";
+
                 checkLeft();
 
             }
@@ -119,7 +157,6 @@ function filterItems(event) {
             for (item of todoList.children) {
                 item.style.display = "flex";
                 checkLeft();
-
             }
             break;
         case "completed":
@@ -129,7 +166,6 @@ function filterItems(event) {
                 else {
                     item.style.display = "flex";
                     checkLeft();
-
                 }
             }
             break;
@@ -145,3 +181,56 @@ function checkLeft() {
     }
     left.innerHTML = `${leftItems} items left`;
 }
+
+
+
+// function switchToLight() {
+//     document.body.classList.toggle('light-body');
+//     newTodo.classList.toggle('light-body');
+
+//     for (let i = 0; i < todo.length; i += 1) {
+//         todo.item(i).classList.toggle("light-body");
+//     }
+//     for (let i = 0; i < todoText.length; i += 1) {
+//         todoText.item(i).classList.toggle("light-text");
+//     }
+// }
+
+const lightMode = document.getElementById('light-mode')
+
+lightMode.addEventListener('click', function () {
+    if (toggleTheme() === "dark") {
+        this.classList = "sun";
+    } else {
+        this.classList = "moon";
+    }
+})
+
+function toggleTheme() {
+    if (localStorage.getItem('theme') === 'theme-dark') {
+        setTheme('theme-light');
+        return "light";
+    } else {
+        setTheme('theme-dark');
+        return "dark";
+    }
+}
+
+
+function setTheme(themeName) {
+    localStorage.setItem('theme', themeName);
+    document.documentElement.className = themeName;
+}
+
+
+//init
+(function () {
+    if (localStorage.getItem('theme') === 'theme-dark') {
+        setTheme('theme-dark');
+    } else {
+        setTheme('theme-light');
+    }
+})();
+
+
+

@@ -28,7 +28,7 @@
 </head>
 
 <body>
-  <div class="bg"></div>
+  <div class="light-bg bg"></div>
 
 
   <div class="container">
@@ -37,7 +37,8 @@
         <h1>TODO</h1>
       </div>
       <div class="dark-mode-icon">
-        <img src="./images/icon-sun.svg" alt="">
+        <input type="image" src="./images/icon-sun.svg" name="light-mode" class="light-mode-btn" id="light-mode" />
+
       </div>
     </div>
 
@@ -121,15 +122,15 @@
       <div class="categories">
         <div class="categories__content">
           <div class="category">
-            <input type="radio" name="category" class="all" />
-            <label>All</label>
+            <input type="radio" name="category" class="all all-1" />
+            <label class="label-color">All</label>
           </div>
           <div class="category">
-            <input type="radio" name="category" class="active" />
+            <input type="radio" name="category" class="active  active-1" />
             <label>Active</label>
           </div>
           <div class="category">
-            <input type="radio" name="category" class="completed" />
+            <input type="radio" name="category" class="completed completed-1" />
             <label>Completed</label>
           </div>
 
