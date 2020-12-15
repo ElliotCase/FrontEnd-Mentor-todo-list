@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- displays site properly based on user's device -->
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./styles/style.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css"
     integrity="sha512-xA6Hp6oezhjd6LiLZynuukm80f8BoZ3OpcEYaqKoCV3HKQDrYjDE1Gu8ocxgxoXmwmSzM4iqPvCsOkQNiu41GA=="
@@ -13,111 +13,77 @@
 
 
   <title>Frontend Mentor | Todo app</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution {
-      font-size: 11px;
-      text-align: center;
-    }
-
-    .attribution a {
-      color: hsl(228, 45%, 44%);
-    }
-  </style>
 </head>
 
 <body>
   <div class="light-bg bg"></div>
-
-
   <div class="container">
     <div class="title-box">
       <div class="title">
         <h1>TODO</h1>
       </div>
-      <div class="dark-mode-icon">
-        <input type="image" src="./images/icon-sun.svg" name="light-mode" class="light-mode-btn" id="light-mode" />
-
+      <div>
+        <button id="light-mode-1" class="remove"></button>
       </div>
     </div>
-
-
     <div class="new-todo">
       <button class="todo-button" type="submit"></button>
       <input id="todo-input" type="text" placeholder="Create a new todo...">
     </div>
-
-
     <div class="todo-container" id="todo-container">
-
-
-
-      <ul class="todo-list">
-        <div class="todo">
+      <ul class="todo-list todo-list1" id="todo-list">
+        <div class="todo" draggable="true">
           <button class="todo-button" type="submit"></button>
           <div class="line">
-
             <li class="todo-text">Complete online javascript course</li>
-            <button class="x"><i class="fas fa-times "></i></button>
+            <button class="delete-todo"><i class="fas fa-times"></i></button>
           </div>
-
         </div>
-
-
-        <div class="todo">
+        <div class="todo" draggable="true">
           <button class="todo-button" type="submit"></button>
           <div class="line">
 
             <li class="todo-text">Jog around the park 3x</li>
-            <button class="x"><i class="fas fa-times "></i></button>
+            <button class="delete-todo"><i class="fas fa-times"></i></button>
           </div>
         </div>
 
-
-        <div class="todo">
+        <div class="todo" draggable="true">
           <button class="todo-button" type="submit"></button>
           <div class="line">
             <li class="todo-text">10 minute meditatio</li>
-            <button class="x"><i class="fas fa-times "></i></button>
+            <button class="delete-todo"><i class="fas fa-times"></i></button>
           </div>
         </div>
 
-
-        <div class="todo">
+        <div class="todo" draggable="true">
           <button class="todo-button" type="submit"></button>
           <div class="line">
             <li class="todo-text">Read for 1 hour</li>
-            <button class="x"><i class="fas fa-times "></i></button>
+            <button class="delete-todo"><i class="fas fa-times"></i></button>
           </div>
         </div>
 
-        <div class="todo">
+        <div class="todo" draggable="true">
           <button class="todo-button" type="submit"></button>
           <div class="line">
             <li class="todo-text">Pick up groceries</li>
-            <button class="x"><i class="fas fa-times "></i></button>
+            <button class="delete-todo"><i class="fas fa-times"></i></button>
           </div>
         </div>
 
-
-        <div class="todo">
+        <div class="todo" draggable="true">
           <button class="todo-button" type="submit"></button>
           <div class="line">
             <li class="todo-text">Complete todo app on FrontendMentor</li>
-            <button class="x"><i class="fas fa-times "></i></button>
+            <button class="delete-todo"><i class="fas fa-times"></i></button>
           </div>
-        </div>
-
-
 
       </ul>
-
-
     </div>
     <div class="settings">
-      <div class="">
-        <p class="leftItems"></p>
+      <div class="left-items">
+        <p class="leftItems white"></p>
       </div>
       <div class="categories">
         <div class="categories__content">
@@ -133,21 +99,20 @@
             <input type="radio" name="category" class="completed completed-1" />
             <label>Completed</label>
           </div>
-
         </div>
-
-
       </div>
-      <div class="clear">
+
+      <div class="clear white">
         <p>Clear Completed</p>
       </div>
+    </div>
 
+    <div class="drag">
+      <p>Drag and Drop to reorder list</p>
     </div>
   </div>
-
-
-
-  <script src="./app.js"></script>
+  </div>
+  <script src="./js/app.js"></script>
 </body>
 
 </html>
