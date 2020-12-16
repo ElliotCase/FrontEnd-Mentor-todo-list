@@ -10,7 +10,7 @@ const clear = document.querySelector(".clear")
 const todo = document.querySelectorAll('.todo')
 const todoText = document.querySelectorAll('.todo-text')
 const newTodo = document.querySelector(".new-todo")
-const active = document.querySelector(".active-1")
+const active = document.querySelector(".active-2")
 const completed = document.querySelector(".completed-1")
 const all = document.querySelector(".all-1")
 
@@ -114,24 +114,24 @@ function getDragAfterElement(todoList1, y) {
 
 
 function activeState() {
-    active.nextElementSibling.classList.toggle('label-color')
-    all.nextElementSibling.classList.remove('label-color')
-    completed.nextElementSibling.classList.remove('label-color')
+    active.previousElementSibling.classList.toggle('label-color')
+    all.previousElementSibling.classList.remove('label-color')
+    completed.previousElementSibling.classList.remove('label-color')
 
 }
 
 function allState() {
-    active.nextElementSibling.classList.remove('label-color')
-    all.nextElementSibling.classList.toggle('label-color')
-    completed.nextElementSibling.classList.remove('label-color')
+    active.previousElementSibling.classList.remove('label-color')
+    all.previousElementSibling.classList.toggle('label-color')
+    completed.previousElementSibling.classList.remove('label-color')
 
 }
 
 
 function completedState() {
-    active.nextElementSibling.classList.remove('label-color')
-    all.nextElementSibling.classList.remove('label-color')
-    completed.nextElementSibling.classList.toggle('label-color')
+    active.previousElementSibling.classList.remove('label-color')
+    all.previousElementSibling.classList.remove('label-color')
+    completed.previousElementSibling.classList.toggle('label-color')
 
 }
 
@@ -208,14 +208,15 @@ function clearCompleted(e) {
 
 function filterItems(event) {
     switch (event.target.classList[0]) {
-        case "active":
+        case "active-1":
             for (item of todoList.children) {
                 if (item.children[0].classList.contains("active"))
                     item.style.display = "none";
-                else item.style.display = "flex";
+                else {
+                    item.style.display = "flex";
 
-                checkLeft();
-
+                    checkLeft();
+                }
             }
             break;
         case "all":

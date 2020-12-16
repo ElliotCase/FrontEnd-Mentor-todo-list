@@ -28,58 +28,57 @@
     </div>
     <div class="new-todo">
       <button class="todo-button" type="submit" title="New_todo"></button>
-
-      <input id="todo-input" type="text" placeholder="Create a new todo..." title="todo_input">
       <label for="todo_input"></label>
+      <input id="todo-input" type="text" placeholder="Create a new todo..." title="todo_input">
     </div>
     <div class="todo-container" id="todo-container">
       <div class="todo-list todo-list1" id="todo-list">
 
         <div class="todo" draggable="true">
-          <button class="todo-button active" type="submit" title="todo_button"></button>
+          <button class="todo-button " type="submit" title="todo_button"></button>
           <div class="line">
-            <li class="todo-text">Complete online javascript course</li>
-            <button class="delete-todo"><i class="fas fa-times" title="delete_todo"></i></button>
+            <p class="todo-text">Complete online javascript course</p>
+            <button class="delete-todo" title="delete_todo"><i class="fas fa-times"></i></button>
           </div>
         </div>
 
         <div class="todo" draggable="true">
           <button class="todo-button" type="submit" title="todo_button"></button>
           <div class="line">
-            <li class="todo-text">Jog around the park 3x</li>
-            <button class="delete-todo"><i class="fas fa-times" title="delete_todo"></i></button>
+            <p class="todo-text">Jog around the park 3x</p>
+            <button class="delete-todo" title="delete_todo"><i class="fas fa-times"></i></button>
           </div>
         </div>
 
         <div class="todo" draggable="true">
           <button class="todo-button" type="submit" title="todo_button"></button>
           <div class="line">
-            <li class="todo-text">10 minute meditatio</li>
-            <button class="delete-todo"><i class="fas fa-times" title="delete_todo"></i></button>
+            <p class="todo-text">10 minute meditatio</p>
+            <button class="delete-todo" title="delete_todo"><i class="fas fa-times"></i></button>
           </div>
         </div>
 
         <div class="todo" draggable="true">
           <button class="todo-button" type="submit" title="todo_button"></button>
           <div class="line">
-            <li class="todo-text">Read for 1 hour</li>
-            <button class="delete-todo"><i class="fas fa-times" title="delete_todo"></i></button>
+            <p class="todo-text">Read for 1 hour</p>
+            <button class="delete-todo" title="delete_todo"><i class="fas fa-times"></i></button>
           </div>
         </div>
 
         <div class="todo" draggable="true">
           <button class="todo-button" type="submit" title="todo_button"></button>
           <div class="line">
-            <li class="todo-text">Pick up groceries</li>
-            <button class="delete-todo"><i class="fas fa-times" title="delete_todo"></i></button>
+            <p class="todo-text">Pick up groceries</p>
+            <button class="delete-todo" title="delete_todo"><i class="fas fa-times"></i></button>
           </div>
         </div>
 
         <div class="todo" draggable="true">
           <button class="todo-button" type="submit" title="todo_button"></button>
           <div class="line">
-            <li class="todo-text">Complete todo app on FrontendMentor</li>
-            <button class="delete-todo"><i class="fas fa-times" title="delete_todo"></i></button>
+            <p class="todo-text">Complete todo app on FrontendMentor</p>
+            <button class="delete-todo" title="delete_todo"><i class="fas fa-times"></i></button>
           </div>
 
         </div>
@@ -91,16 +90,17 @@
         <div class="categories">
           <div class="categories__content">
             <div class="category">
-              <input type="radio" name="category" class="all all-1" title="all_todos" />
               <label for="all_todos" class="label-color">All</label>
+              <input type="radio" name="category" class="all all-1" title="all_todos" id="all_todos" />
             </div>
             <div class="category">
-              <input type="radio" name="category" class="active  active-1" title="active_todos" />
               <label for="active_todos">Active</label>
+              <input type="radio" name="category" class="active-1  active-2" title="active_todos" id="active_todos" />
             </div>
             <div class="category">
-              <input type="radio" name="category" class="completed completed-1" title="completed_todos" />
               <label for="completed_todos">Completed</label>
+              <input type="radio" name="category" class="completed completed-1" title="completed_todos"
+                id="completed_todos" />
             </div>
           </div>
         </div>
