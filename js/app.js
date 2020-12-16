@@ -148,9 +148,39 @@ function deleteCheck(e) {
         const todo = item.nextElementSibling.firstElementChild
         todo.classList.toggle('completed');
     }
+    if (item.classList[0] === 'todo-text') {
+        const tick = item
+        tick.classList.toggle('completed');
+    }
+
+    if (item.classList[0] === 'todo') {
+        const todo = item.firstElementChild.nextElementSibling.firstElementChild
+        todo.classList.toggle('completed');
+    }
+
+    if (item.classList[0] === 'line') {
+        const todo = item.firstElementChild
+        todo.classList.toggle('completed');
+    }
+
+
     if (item.classList[0] === 'todo-button') {
         const tick = item
-        tick.classList.toggle('completed-tick');
+        tick.classList.toggle('active');
+
+    }
+
+    if (item.classList[0] === 'todo-text') {
+        const todoo = item.parentElement.previousElementSibling;
+        todoo.classList.toggle('active')
+    }
+    if (item.classList[0] === 'todo') {
+        const todoo = item.firstElementChild;
+        todoo.classList.toggle('active');
+    }
+    if (item.classList[0] === 'line') {
+        const todoo = item.previousElementSibling;
+        todoo.classList.toggle('active');
     }
     checkLeft();
 }
@@ -161,7 +191,7 @@ function deleteCheck(e) {
 function clearCompleted(e) {
     for (let i = todoList.children.length - 1; i >= 0; i--) {
         if (
-            todoList.children[i].children[0].classList.contains("completed-tick")
+            todoList.children[i].children[0].classList.contains("active")
         ) {
             todoList.children[i].remove()
         };
@@ -180,7 +210,7 @@ function filterItems(event) {
     switch (event.target.classList[0]) {
         case "active":
             for (item of todoList.children) {
-                if (item.children[0].classList.contains("completed-tick"))
+                if (item.children[0].classList.contains("active"))
                     item.style.display = "none";
                 else item.style.display = "flex";
 
@@ -196,7 +226,7 @@ function filterItems(event) {
             break;
         case "completed":
             for (item of todoList.children) {
-                if (!item.children[0].classList.contains("completed-tick"))
+                if (!item.children[0].classList.contains("active"))
                     item.style.display = "none";
                 else {
                     item.style.display = "flex";
@@ -211,7 +241,7 @@ function filterItems(event) {
 function checkLeft() {
     let leftItems = 0;
     for (let i = todoList.children.length - 1; i >= 0; i--) {
-        if (todoList.children[i].children[0].classList.contains("completed-tick")) continue;
+        if (todoList.children[i].children[0].classList.contains("active")) continue;
         leftItems++;
     }
     left.innerHTML = `${leftItems} items left`;

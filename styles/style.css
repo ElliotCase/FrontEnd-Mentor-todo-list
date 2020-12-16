@@ -67,7 +67,6 @@ h1{
     margin-bottom: 20px;  
 }
 
-
 input#todo-input {
     background-color: transparent;
     border-style: none;
@@ -88,19 +87,56 @@ input#todo-input {
     outline: none;
   }
 
-
-  .todo-button{
-    background-color: transparent;
-    border:1px solid gray;    
-    height:20px;
-    border-radius:50%;
-    width:20px;
-    background-image: none;
+  .todo-button {
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+    position: relative;
     cursor: pointer;
-
-    
-    
+    outline: none;
+    border: none;
+    color: #fff;
   }
+  .todo-button::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 93%;
+    height: 93%;
+    background: var(--bg);
+    border-radius: 50%;
+    outline: none;
+    transition: 0.2s all ease-in;
+
+  }
+
+
+  .todo:hover .todo-button {
+    background-image: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+  }
+  .active {
+    z-index: 999999;
+    position: relative;
+    background-image: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+  }
+  .active.todo-button::before {
+    z-index: 999999;
+    content: "";
+    position: absolute;
+    background: transparent;
+    display: grid;
+    place-items: center;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    transform: scale(0.5);
+    background-size: cover;
+    background-image: url("../images/icon-check.svg");
+  }
+
 
 .todo-block{
     width: 100%;
@@ -191,19 +227,6 @@ input#todo-input {
 }
 
 
-
-
-.completed-tick{
-  background-image:  url(../images/icon-check.svg), 
-  linear-gradient(#57ddff ,#c058f3); 
-  background-repeat: no-repeat;
-  background-position: center;
-  transition: none;
-}
-
-
-
-
 .categories__content {
   display: flex;
 }
@@ -262,6 +285,7 @@ width: 30px;
 height: 30px;
 border: none;
 outline: none;
+cursor: pointer;
 }
 
 .remove{

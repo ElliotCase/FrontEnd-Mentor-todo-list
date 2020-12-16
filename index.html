@@ -23,94 +23,97 @@
         <h1>TODO</h1>
       </div>
       <div>
-        <button id="light-mode-1" class="remove"></button>
+        <button id="light-mode-1" class="remove" title="Light_Mode"></button>
       </div>
     </div>
     <div class="new-todo">
-      <button class="todo-button" type="submit"></button>
-      <input id="todo-input" type="text" placeholder="Create a new todo...">
+      <button class="todo-button" type="submit" title="New_todo"></button>
+
+      <input id="todo-input" type="text" placeholder="Create a new todo..." title="todo_input">
+      <label for="todo_input"></label>
     </div>
     <div class="todo-container" id="todo-container">
-      <ul class="todo-list todo-list1" id="todo-list">
+      <div class="todo-list todo-list1" id="todo-list">
+
         <div class="todo" draggable="true">
-          <button class="todo-button" type="submit"></button>
+          <button class="todo-button active" type="submit" title="todo_button"></button>
           <div class="line">
             <li class="todo-text">Complete online javascript course</li>
-            <button class="delete-todo"><i class="fas fa-times"></i></button>
+            <button class="delete-todo"><i class="fas fa-times" title="delete_todo"></i></button>
           </div>
         </div>
+
         <div class="todo" draggable="true">
-          <button class="todo-button" type="submit"></button>
+          <button class="todo-button" type="submit" title="todo_button"></button>
           <div class="line">
-
             <li class="todo-text">Jog around the park 3x</li>
-            <button class="delete-todo"><i class="fas fa-times"></i></button>
+            <button class="delete-todo"><i class="fas fa-times" title="delete_todo"></i></button>
           </div>
         </div>
 
         <div class="todo" draggable="true">
-          <button class="todo-button" type="submit"></button>
+          <button class="todo-button" type="submit" title="todo_button"></button>
           <div class="line">
             <li class="todo-text">10 minute meditatio</li>
-            <button class="delete-todo"><i class="fas fa-times"></i></button>
+            <button class="delete-todo"><i class="fas fa-times" title="delete_todo"></i></button>
           </div>
         </div>
 
         <div class="todo" draggable="true">
-          <button class="todo-button" type="submit"></button>
+          <button class="todo-button" type="submit" title="todo_button"></button>
           <div class="line">
             <li class="todo-text">Read for 1 hour</li>
-            <button class="delete-todo"><i class="fas fa-times"></i></button>
+            <button class="delete-todo"><i class="fas fa-times" title="delete_todo"></i></button>
           </div>
         </div>
 
         <div class="todo" draggable="true">
-          <button class="todo-button" type="submit"></button>
+          <button class="todo-button" type="submit" title="todo_button"></button>
           <div class="line">
             <li class="todo-text">Pick up groceries</li>
-            <button class="delete-todo"><i class="fas fa-times"></i></button>
+            <button class="delete-todo"><i class="fas fa-times" title="delete_todo"></i></button>
           </div>
         </div>
 
         <div class="todo" draggable="true">
-          <button class="todo-button" type="submit"></button>
+          <button class="todo-button" type="submit" title="todo_button"></button>
           <div class="line">
             <li class="todo-text">Complete todo app on FrontendMentor</li>
-            <button class="delete-todo"><i class="fas fa-times"></i></button>
+            <button class="delete-todo"><i class="fas fa-times" title="delete_todo"></i></button>
           </div>
 
-      </ul>
-    </div>
-    <div class="settings">
-      <div class="left-items">
-        <p class="leftItems white"></p>
+        </div>
       </div>
-      <div class="categories">
-        <div class="categories__content">
-          <div class="category">
-            <input type="radio" name="category" class="all all-1" />
-            <label class="label-color">All</label>
+      <div class="settings">
+        <div class="left-items">
+          <p class="leftItems white"></p>
+        </div>
+        <div class="categories">
+          <div class="categories__content">
+            <div class="category">
+              <input type="radio" name="category" class="all all-1" title="all_todos" />
+              <label for="all_todos" class="label-color">All</label>
+            </div>
+            <div class="category">
+              <input type="radio" name="category" class="active  active-1" title="active_todos" />
+              <label for="active_todos">Active</label>
+            </div>
+            <div class="category">
+              <input type="radio" name="category" class="completed completed-1" title="completed_todos" />
+              <label for="completed_todos">Completed</label>
+            </div>
           </div>
-          <div class="category">
-            <input type="radio" name="category" class="active  active-1" />
-            <label>Active</label>
-          </div>
-          <div class="category">
-            <input type="radio" name="category" class="completed completed-1" />
-            <label>Completed</label>
-          </div>
+        </div>
+
+        <div class="clear white">
+          <p>Clear Completed</p>
         </div>
       </div>
 
-      <div class="clear white">
-        <p>Clear Completed</p>
+      <div class="drag">
+        <p>Drag and Drop to reorder list</p>
       </div>
     </div>
-
-    <div class="drag">
-      <p>Drag and Drop to reorder list</p>
-    </div>
-  </div>
   </div>
   <script src="./js/app.js"></script>
 </body>
